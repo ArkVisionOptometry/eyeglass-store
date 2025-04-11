@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>明视眼镜店 - 专业视力解决方案</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #007bff;
+            padding: 15px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 首页横幅 */
+        .banner {
+            height: 400px;
+            background: linear-gradient(rgba(0, 123, 255, 0.5), rgba(0, 123, 255, 0.5)), 
+                        url('https://via.placeholder.com/1920x400.png/CCCCCC?text=眼镜店首页轮播图') no-repeat center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            margin-top: 60px;
+        }
+
+        /* 产品展示 */
+        .products {
+            padding: 40px 20px;
+            background: #f8f9fa;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: #007bff;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        /* 关于我们 */
+        .about {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* 联系方式 */
+        .contact {
+            padding: 40px 20px;
+            background: #007bff;
+            color: white;
+            text-align: center;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .btn {
+            background: white;
+            color: #007bff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #e8f0fe;
+        }
+
+        /* 页脚 */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <h3>明视眼镜店</h3>
+    </div>
+
+    <!-- 首页横幅 -->
+    <div class="banner">
+        <h1>专业视力解决方案</h1>
+        <p>精选品牌 | 精准验光 | 舒适佩戴</p>
+    </div>
+
+    <!-- 产品展示 -->
+    <div class="products">
+        <h2 style="text-align: center; margin-bottom: 30px;">热销产品</h2>
+        <div class="product-grid">
+            <!-- 产品卡片示例，可复制多个 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png/EEE?text=时尚太阳镜" alt="产品1">
+                <h4>时尚太阳镜</h4>
+                <div class="price">¥399</div>
+                <p>高清偏光镜片，有效阻挡紫外线</p>
+                <button class="btn">立即购买</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png/EEE?text=防蓝光眼镜" alt="产品2">
+                <h4>防蓝光眼镜</h4>
+                <div class="price">¥299</div>
+                <p>专业抗蓝光镜片，保护眼睛健康</p>
+                <button class="btn">立即购买</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200.png/EEE?text=儿童近视镜" alt="产品3">
+                <h4>儿童近视镜</h4>
+                <div class="price">¥499</div>
+                <p>轻便材质，可调节镜架设计</p>
+                <button class="btn">立即购买</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于我们 -->
+    <div class="about">
+        <h2>关于我们</h2>
+        <p>明视眼镜店成立于2010年，专注于提供高品质的视力矫正解决方案。我们拥有专业的验光团队和丰富的品牌选择，致力于为每一位顾客带来清晰舒适的视觉体验。</p>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="contact">
+        <h2>联系我们</h2>
+        <p>如有任何问题或预约验光，欢迎随时联系我们</p>
+        <form class="contact-form">
+            <input type="text" placeholder="姓名" required>
+            <input type="email" placeholder="邮箱" required>
+            <textarea rows="4" placeholder="留言内容" required></textarea>
+            <button class="btn">提交留言</button>
+        </form>
+        <p style="margin-top: 20px;">门店地址：XX市XX区XX街道123号</p>
+        <p>联系电话：400-123-4567</p>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <p>© 2025 明视眼镜店 版权所有 | 备案号：XXXXXXX</p>
+    </div>
+</body>
+</html>
